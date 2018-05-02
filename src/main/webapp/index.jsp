@@ -7,7 +7,26 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<a href="springMVC/testRequestara?username=zhaoyingming&password=123456">Test Requestara</a>
+	<form action="springMVC/testPojo" method="post">
+		uername:<input type="text" name="username" />
+		<br>
+		password:<input type="password" name="password" />
+		<br>
+		email:<input type="text" name="email" />
+		<br>
+		age:<input type="text" name="age" />
+		<br>
+		province:<input type="text" name="address.province" />
+		<br>
+		city:<input type="text" name="address.city" />
+		<br>
+		<input type="submit" value="Submit">
+	</form>
+	<br>
+	<br>
+	<a
+		href="springMVC/testRequestara?username=zhaoyingming&password=123456">Test
+		Requestara</a>
 	<br>
 	<br>
 	<a href="springMVC/testRest/5">Test Rest GET</a>
@@ -19,8 +38,8 @@
 	<br>
 	<br>
 	<form action="springMVC/testRest/1" method="post">
-		<input type="hidden" name="_method" value="DELETE"/>
-		<input type="submit" value="TestRest DELETE"/>
+		<input type="hidden" name="_method" value="DELETE" /> <input
+			type="submit" value="TestRest DELETE" />
 	</form>
 	<br>
 	<br>
