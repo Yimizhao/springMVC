@@ -1,18 +1,29 @@
 package com.zym.springMVC.handler;
 
+import java.util.Map;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.zym.springMVC.entities.User;
 
+@SessionAttributes(types= {User.class})
 @RequestMapping("/springMVC")
 @Controller
 public class TestRequestMapping {
 	private static final String SUCCESS = "success";
+
+	@RequestMapping("/testSessionAttributes")
+	public String testSessionAttributes(Map<String, Object> map) {
+		User user = new User("Jack", "123", "ajaf@163.com", 26);
+		map.put("user", user);
+		return SUCCESS;
+	}
 
 	@RequestMapping("/testModelAndView")
 	public ModelAndView testModelAndView() {

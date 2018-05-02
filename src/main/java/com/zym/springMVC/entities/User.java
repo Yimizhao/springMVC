@@ -53,4 +53,12 @@ public class User {
 				+ ", address=" + address + "]";
 	}
 
+	public User(String username, String password, String email, int age) {
+		super();
+		this.username = username;
+		this.password = password;
+		this.email = email;
+		this.age = age;
+	}
+
 }

@@ -8,6 +8,10 @@
 </head>
 <body>
 	<a
+		href="springMVC/testSessionAttributes">Test SessionAttributes</a>
+	<br>
+	<br>
+	<a
 		href="springMVC/testModelAndView">Test ModelAndView</a>
 	<br>
 	<br>

@@ -9,5 +9,9 @@
 <body>
 	<h4>Success Page</h4>
 	time:<input type="text" value="${requestScope.name }" disabled="disabled">
+	<br><br>
+	requestScopeUser:${requestScope.user }
+	<br><br>
+	sessionScopeUser:${sessionScope.user }
 </body>
 </html>
