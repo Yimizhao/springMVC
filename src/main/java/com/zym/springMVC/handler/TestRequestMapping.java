@@ -5,6 +5,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.ModelAndView;
 
 import com.zym.springMVC.entities.User;
 
@@ -12,6 +13,13 @@ import com.zym.springMVC.entities.User;
 @Controller
 public class TestRequestMapping {
 	private static final String SUCCESS = "success";
+
+	@RequestMapping("/testModelAndView")
+	public ModelAndView testModelAndView() {
+		ModelAndView modelAndView = new ModelAndView(SUCCESS);
+		modelAndView.addObject("name", "Yimi");
+		return modelAndView;
+	}
 
 	@RequestMapping("/testPojo")
 	public String testPojo(User user) {

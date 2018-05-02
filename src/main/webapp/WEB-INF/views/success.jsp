@@ -8,5 +8,6 @@
 </head>
 <body>
 	<h4>Success Page</h4>
+	time:<input type="text" value="${requestScope.name }" disabled="disabled">
 </body>
 </html>

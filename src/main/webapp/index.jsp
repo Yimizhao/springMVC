@@ -7,6 +7,10 @@
 <title>Insert title here</title>
 </head>
 <body>
+	<a
+		href="springMVC/testModelAndView">Test ModelAndView</a>
+	<br>
+	<br>
 	<form action="springMVC/testPojo" method="post">
 		uername:<input type="text" name="username" />
 		<br>
