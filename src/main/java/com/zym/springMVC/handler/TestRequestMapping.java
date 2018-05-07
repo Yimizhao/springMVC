@@ -1,8 +1,10 @@
 package com.zym.springMVC.handler;
 
 import java.util.Map;
+import java.util.Objects;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -12,11 +14,25 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.zym.springMVC.entities.User;
 
-@SessionAttributes(types= {User.class})
+@SessionAttributes(types = { User.class })
 @RequestMapping("/springMVC")
 @Controller
 public class TestRequestMapping {
 	private static final String SUCCESS = "success";
+
+	@ModelAttribute
+	public void getUser(@RequestParam(value = "id", required = false) Integer id, Map<String, Object> map) {
+		if (!Objects.isNull(id)) {
+			User user = new User("Jock", "123456", "Jock@zym.com", 25, 1);
+			map.put("user", user);
+		}
+	}
+
+	@RequestMapping("testModelAttribute")
+	public String testModelAttribute(User user) {
+		System.out.println("testModelAttribute User:" + user);
+		return SUCCESS;
+	}
 
 	@RequestMapping("/testSessionAttributes")
 	public String testSessionAttributes(Map<String, Object> map) {

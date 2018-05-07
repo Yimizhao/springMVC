@@ -7,6 +7,20 @@
 <title>Insert title here</title>
 </head>
 <body>
+	<form action="springMVC/testModelAttribute" method="post">
+		<input type="hidden" name="id" value="1">
+		<br>
+		uername:<input type="text" name="username" value="Jock"/>
+		<br>
+		email:<input type="text" name="email" value="Jock@zym.com"/>
+		<br>
+		age:<input type="text" name="age" value="25"/>
+		<br>
+		<input type="submit" value="Submit">
+
+	</form>
+	<br>
+	<br>
 	<a
 		href="springMVC/testSessionAttributes">Test SessionAttributes</a>
 	<br>

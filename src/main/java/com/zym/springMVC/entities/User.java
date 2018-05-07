@@ -5,6 +5,9 @@ public class User {
 	private String password;
 	private String email;
 	private int age;
+
+	private Integer id;
+
 	private Address address;
 
 	public String getUsername() {
@@ -49,8 +52,8 @@ public class User {
 
 	@Override
 	public String toString() {
-		return "User [username=" + username + ", password=" + password + ", email=" + email + ", age=" + age
-				+ ", address=" + address + "]";
+		return "User [username=" + username + ", password=" + password + ", email=" + email + ", age=" + age + ", id="
+				+ id + ", address=" + address + "]";
 	}
 
 	public User(String username, String password, String email, int age) {
@@ -59,6 +62,15 @@ public class User {
 		this.password = password;
 		this.email = email;
 		this.age = age;
+	}
+
+	public User(String username, String password, String email, int age, Integer id) {
+		super();
+		this.username = username;
+		this.password = password;
+		this.email = email;
+		this.age = age;
+		this.id = id;
 	}
 
 }
